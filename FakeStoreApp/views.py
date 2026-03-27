@@ -125,3 +125,7 @@ class ProductListView(APIView):
             return Response({"error": "limit must be an integer"}, status=400)
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data, status=200)
+
+class StatusView(APIView):
+    def get(self, request):
+        return Response({"status": "online", "message": "API is Up and Running!"})

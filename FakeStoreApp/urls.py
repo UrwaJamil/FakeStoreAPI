@@ -10,5 +10,6 @@ urlpatterns = [
     path('products/category/<str:category>/', ProductsByCategory.as_view(), name='products by category'),
     path('cart/', CartCreateView.as_view(),name='the cart'),               
     path('carts', CartQueryView.as_view(),name='cart by user id'),
-     path('products', ProductListView.as_view(),name='view products upto certain limit'),
+    path('products', ProductListView.as_view(),name='view products upto certain limit'),
+    path('status/', StatusView.as_view(), name='status'),
 ]
